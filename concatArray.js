@@ -8,7 +8,11 @@ function concatArray(array1, array2) {
         return array2
     } else if (array1 != undefined && array2 == undefined){
         return array1
-    } 
+    } else if (array1 == null || array1 == undefined) {
+      return undefined
+    } else if (array2 == null || array2 == undefined) {
+      return undefined
+    }
 
 }
 module.exports = concatArray
@@ -23,4 +27,3 @@ console.log(concatArray(undefined, undefined))
 console.log(concatArray(null, undefined) )
 console.log(concatArray(undefined, null) )
 console.log(concatArray(null, null) )
-
